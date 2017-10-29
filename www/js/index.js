@@ -55,7 +55,7 @@ var app = {
         app.refreshDeviceList();
     },
     refreshDeviceList: function() {
-        deviceList.innerHTML = ''; // empties the list
+        deviceList.innerHTML = 'No devices ...'; // empties the list
         ble.scan([], 5, app.onDiscoverDevice, app.onError);
         
         // if Android can't find your device try scanning for all devices
